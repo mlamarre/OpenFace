@@ -27,4 +27,4 @@ include_directories(${GAZEANALYSER_SOURCE_DIR}/include)
 add_library( GazeAnalyser ${SOURCE} ${HEADERS})
 
 install (TARGETS GazeAnalyser DESTINATION lib)
-install (FILES ${HEADERS} DESTINATION include/OpenFace)
+install (FILES ${HEADERS} DESTINATION include/OpenFace/GazeAnalyser)

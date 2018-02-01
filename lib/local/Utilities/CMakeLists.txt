@@ -28,4 +28,4 @@ include_directories(${UTILITIES_SOURCE_DIR}/include)
 add_library( Utilities ${SOURCE} ${HEADERS})
 
 install (TARGETS Utilities DESTINATION lib)
-install (FILES ${HEADERS} DESTINATION include/OpenFace)
+install (FILES ${HEADERS} DESTINATION include/OpenFace/Utilities)
