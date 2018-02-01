@@ -34,7 +34,7 @@
 
 #include "stdafx.h"
 
-#include <LandmarkDetectorModel.h>
+#include "LandmarkDetectorModel.h"
 
 // Boost includes
 #include <filesystem.hpp>
@@ -44,8 +44,8 @@
 #include <tbb/tbb.h>
 
 // Local includes
-#include <LandmarkDetectorUtils.h>
-#include <RotationHelpers.h>
+#include "LandmarkDetectorUtils.h"
+#include <Utilities/RotationHelpers.h>
 
 using namespace LandmarkDetector;
 

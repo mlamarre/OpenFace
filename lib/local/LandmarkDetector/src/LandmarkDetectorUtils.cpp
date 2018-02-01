@@ -34,7 +34,7 @@
 
 #include "stdafx.h"
 
-#include <LandmarkDetectorUtils.h>
+#include "LandmarkDetectorUtils.h"
 
 // OpenCV includes
 #include <opencv2/core/core.hpp>
