@@ -42,7 +42,7 @@
 
 #include <LandmarkDetector/LandmarkDetectorUtils.h>
 #include <LandmarkDetector/LandmarkDetectorFunc.h>
-#include <Utilities/RotationHelpers.h>
+#include <RotationHelpers.h>
 
 using namespace std;
 

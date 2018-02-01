@@ -48,7 +48,7 @@
 #endif
 
 #include "Face_utils.h"
-#include <Utilities/RotationHelpers.h>
+#include <RotationHelpers.h>
 
 // OpenBLAS
 #include <cblas.h>

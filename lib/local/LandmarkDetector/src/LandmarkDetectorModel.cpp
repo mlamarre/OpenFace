@@ -45,7 +45,7 @@
 
 // Local includes
 #include "LandmarkDetectorUtils.h"
-#include <Utilities/RotationHelpers.h>
+#include <RotationHelpers.h>
 
 using namespace LandmarkDetector;
 
