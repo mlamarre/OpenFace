@@ -40,8 +40,8 @@
 
 #include "GazeEstimation.h"
 
-#include <LandmarkDetector/LandmarkDetectorUtils.h>
-#include <LandmarkDetector/LandmarkDetectorFunc.h>
+#include <LandmarkDetectorUtils.h>
+#include <LandmarkDetectorFunc.h>
 #include <RotationHelpers.h>
 
 using namespace std;
