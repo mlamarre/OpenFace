@@ -8,6 +8,7 @@ include_directories(${BOOST_INCLUDE_DIR})
 include_directories(../../3rdParty/OpenBLAS/include)
 
 #Utilities library
+include_directories(../../local)
 include_directories(../../local/Utilities/include)
 
 SET(SOURCE
