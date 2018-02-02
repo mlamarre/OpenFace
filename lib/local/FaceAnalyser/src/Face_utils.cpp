@@ -114,7 +114,7 @@ namespace FaceAnalysis
 	}
 
 	// Aligning a face to a common reference frame
-	void AlignFace(cv::Mat& aligned_face, const cv::Mat& frame, const cv::Mat_<float>& detected_landmarks, cv::Vec6d params_global, const PDM& pdm, bool rigid, float sim_scale, int out_width, int out_height)
+	void AlignFace(cv::Mat& aligned_face, const cv::Mat& frame, const cv::Mat_<float>& detected_landmarks, cv::Vec6f params_global, const PDM& pdm, bool rigid, float sim_scale, int out_width, int out_height)
 	{
 		// Will warp to scaled mean shape
 		cv::Mat_<float> similarity_normalised_shape = pdm.mean_shape * sim_scale;
