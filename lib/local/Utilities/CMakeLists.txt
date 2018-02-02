@@ -1,4 +1,5 @@
 include_directories(${BOOST_INCLUDE_DIR})
+include_directories(${TBB_ROOT_DIR}/include)
 
 SET(SOURCE
     src/ImageCapture.cpp
