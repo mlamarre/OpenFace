@@ -11,27 +11,28 @@ add_definitions(-DCONFIG_DIR="${CONFIG_DIR}" -DOPENCV_TRAITS_ENABLE_DEPRECATED)
 
 find_package( BLAS REQUIRED )
 include_directories( ${BLAS_INCLUDE_DIRS} )
-LINK_DIRECTORIES(${BLAS_LIBRARY_DIRS})	
+LINK_DIRECTORIES(${BLAS_LIBRARY_DIRS}
 
-find_package( OpenCV 3.1 REQUIRED )
+find_package( OpenCV 3.4.1 REQUIRED )
 
-MESSAGE("OpenCV information:") 
-MESSAGE("  OpenCV_INCLUDE_DIRS: ${OpenCV_INCLUDE_DIRS}") 
-MESSAGE("  OpenCV_LIBRARIES: ${OpenCV_LIBRARIES}") 
-MESSAGE("  OpenCV_LIBRARY_DIRS: ${OpenCV_LIBRARY_DIRS}") 
+MESSAGE("OpenCV information:")
+MESSAGE("  OpenCV_INCLUDE_DIRS: ${OpenCV_INCLUDE_DIRS}")
+MESSAGE("  OpenCV_LIBRARIES: ${OpenCV_LIBRARIES}")
+MESSAGE("  OpenCV_LIBRARY_DIRS: ${OpenCV_LIBRARY_DIRS}")
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
 find_package( Boost 1.5.9 REQUIRED COMPONENTS filesystem system)
-MESSAGE("Boost information:") 
-MESSAGE("  Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}") 
-MESSAGE("  Boost_LIBRARIES: ${Boost_LIBRARIES}") 
-MESSAGE("  Boost_LIBRARY_DIRS: ${Boost_LIBRARY_DIRS}") 
+MESSAGE("Boost information:")
+MESSAGE("  Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+MESSAGE("  Boost_LIBRARIES: ${Boost_LIBRARIES}")
+MESSAGE("  Boost_LIBRARY_DIRS: ${Boost_LIBRARY_DIRS}")
 
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS}/boost)
-LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})	
+LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
 
 find_package(TBB REQUIRED)
+find_package(dlib REQUIRED)
 
 # Move LandmarkDetector model
 file(GLOB files "lib/local/LandmarkDetector/model/*.txt")
