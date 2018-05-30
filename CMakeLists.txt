@@ -32,6 +32,7 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS}/boost)
 LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})	
 
 find_package(TBB REQUIRED)
+find_package(dlib REQUIRED)
 
 # Move LandmarkDetector model
 file(GLOB files "lib/local/LandmarkDetector/model/*.txt")
@@ -202,12 +203,6 @@ if(WIN32)
 else()
 	INCLUDE_DIRECTORIES(${BOOST_INCLUDE_DIR})
 endif()
-
-# dlib
-include_directories(lib/3rdParty/dlib/include)
-
-# dlib library
-add_subdirectory(lib/3rdParty/dlib)
 
 # LandmarkDetector library
 add_subdirectory(lib/local/LandmarkDetector)
