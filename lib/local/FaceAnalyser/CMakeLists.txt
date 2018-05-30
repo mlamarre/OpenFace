@@ -38,6 +38,7 @@ include_directories(./include)
 include_directories(${FACEANALYSER_SOURCE_DIR}/include)
 
 add_library( FaceAnalyser ${SOURCE} ${HEADERS})
+target_link_libraries( FaceAnalyser ${OpenCV_LIBS} ${TBB_LIBRARIES} dlib::dlib Threads::Threads Boost::system Boost::filesystem )
 
 install (TARGETS FaceAnalyser DESTINATION lib)
 install (FILES ${HEADERS} DESTINATION include/OpenFace/FaceAnalyser)

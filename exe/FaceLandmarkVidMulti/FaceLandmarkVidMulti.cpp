@@ -43,6 +43,9 @@
 #include <fstream>
 #include <sstream>
 
+#include <tbb/atomic.h>
+#include <tbb/parallel_for.h>
+
 // OpenCV includes
 #include <opencv2/videoio/videoio.hpp>  // Video write
 #include <opencv2/videoio/videoio_c.h>  // Video write

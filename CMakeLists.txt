@@ -11,7 +11,7 @@ add_definitions(-DCONFIG_DIR="${CONFIG_DIR}" -DOPENCV_TRAITS_ENABLE_DEPRECATED)
 
 find_package( BLAS REQUIRED )
 include_directories( ${BLAS_INCLUDE_DIRS} )
-LINK_DIRECTORIES(${BLAS_LIBRARY_DIRS}
+LINK_DIRECTORIES(${BLAS_LIBRARY_DIRS})
 
 find_package( OpenCV 3.4.1 REQUIRED )
 
@@ -21,7 +21,7 @@ MESSAGE("  OpenCV_LIBRARIES: ${OpenCV_LIBRARIES}")
 MESSAGE("  OpenCV_LIBRARY_DIRS: ${OpenCV_LIBRARY_DIRS}")
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-find_package( Boost 1.5.9 REQUIRED COMPONENTS filesystem system)
+find_package(Boost REQUIRED COMPONENTS filesystem system)
 MESSAGE("Boost information:")
 MESSAGE("  Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
 MESSAGE("  Boost_LIBRARIES: ${Boost_LIBRARIES}")
@@ -179,12 +179,6 @@ if(WIN32)
 else()
 	INCLUDE_DIRECTORIES(${BOOST_INCLUDE_DIR})
 endif()
-
-# dlib
-include_directories(lib/3rdParty/dlib/include)
-
-# dlib library
-add_subdirectory(lib/3rdParty/dlib)
 
 # LandmarkDetector library
 add_subdirectory(lib/local/LandmarkDetector)
