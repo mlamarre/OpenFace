@@ -25,5 +25,10 @@ include_directories(${GAZEANALYSER_SOURCE_DIR}/include)
 add_library( GazeAnalyser ${SOURCE} ${HEADERS})
 target_link_libraries( GazeAnalyser ${OpenCV_LIBS} LandmarkDetector dlib::dlib )
 
-install (TARGETS GazeAnalyser DESTINATION lib)
 install (FILES ${HEADERS} DESTINATION include/OpenFace/GazeAnalyser)
+if (MSVC)
+	install (TARGETS GazeAnalyser DESTINATION lib/$<CONFIG>)
+else (MSVC)
+	install (TARGETS GazeAnalyser DESTINATION lib)
+endif (MSVC)
+

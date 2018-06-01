@@ -44,5 +44,10 @@ include_directories(${LandmarkDetector_SOURCE_DIR}/include)
 add_library( LandmarkDetector ${SOURCE} ${HEADERS} )
 target_link_libraries( LandmarkDetector ${OpenCV_LIBS} ${TBB_LIBRARIES} dlib::dlib Threads::Threads Boost::system Boost::filesystem )
 
-install (TARGETS LandmarkDetector DESTINATION lib)
 install (FILES ${HEADERS} DESTINATION include/OpenFace/LandmarkDetector)
+if (MSVC)
+	install (TARGETS LandmarkDetector DESTINATION lib/$<CONFIG>)
+else (MSVC)
+	install (TARGETS LandmarkDetector DESTINATION lib)
+endif (MSVC)
+

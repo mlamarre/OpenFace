@@ -29,5 +29,11 @@ include_directories(${UTILITIES_SOURCE_DIR}/include)
 add_library( Utilities ${SOURCE} ${HEADERS})
 target_link_libraries( Utilities ${OpenCV_LIBS} Threads::Threads Boost::system Boost::filesystem dlib::dlib )
 
-install (TARGETS Utilities DESTINATION lib)
 install (FILES ${HEADERS} DESTINATION include/OpenFace/Utilities)
+if (MSVC)
+	install (TARGETS Utilities DESTINATION lib/$<CONFIG>)
+	set_target_properties(Utilities PROPERTIES COMPILE_OPTIONS "/Z7")
+else (MSVC)
+	install (TARGETS Utilities DESTINATION lib)
+endif (MSVC)
+
