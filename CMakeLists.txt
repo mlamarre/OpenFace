@@ -31,6 +31,10 @@ INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS})
 INCLUDE_DIRECTORIES(${Boost_INCLUDE_DIRS}/boost)
 LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
 
+if (MSVC)
+	add_definitions(-D_WIN32_WINNT=0x0A00)
+endif(MSVC)
+
 find_package(TBB REQUIRED)
 find_package(dlib REQUIRED)
 

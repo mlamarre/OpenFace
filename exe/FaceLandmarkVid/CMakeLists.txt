@@ -16,7 +16,7 @@ target_link_libraries(FaceLandmarkVid FaceAnalyser)
 target_link_libraries(FaceLandmarkVid GazeAnalyser)
 target_link_libraries(FaceLandmarkVid Utilities)
 
-target_link_libraries(FaceLandmarkVid dlib)
+target_link_libraries(FaceLandmarkVid dlib::dlib)
 
 target_link_libraries(FaceLandmarkVid ${OpenCV_LIBS} ${Boost_LIBRARIES} ${TBB_LIBRARIES} ${BLAS_LIBRARIES})
 
