@@ -47,6 +47,7 @@ target_link_libraries( LandmarkDetector ${OpenCV_LIBS} ${TBB_LIBRARIES} dlib::dl
 install (FILES ${HEADERS} DESTINATION include/OpenFace/LandmarkDetector)
 if (MSVC)
 	install (TARGETS LandmarkDetector DESTINATION lib/$<CONFIG>)
+	set_target_properties(LandmarkDetector PROPERTIES COMPILE_OPTIONS "/Z7")
 else (MSVC)
 	install (TARGETS LandmarkDetector DESTINATION lib)
 endif (MSVC)
